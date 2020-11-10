@@ -26,7 +26,7 @@ class RegisterController extends Controller
 
       if ($file->save(public_path('/image/' .$name))) {
 
-          Band::create([
+        $data =   Band::create([
             'band_song' => request('band_song'),
             'band_code' => request('band_code'),
             'band_desc' => request('band_desc'),
@@ -84,7 +84,6 @@ class RegisterController extends Controller
 
   public function deleteRegister(){
     $id  = Auth::user()->band_id;
-    
     $data = Band::select()->where('band_code', $id)->orderBy('is_hidden', 'asc')->get();
     return view('user.delete', compact('data'));
   }

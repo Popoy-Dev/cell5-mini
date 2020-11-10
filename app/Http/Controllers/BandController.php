@@ -18,7 +18,7 @@ class BandController extends Controller
         'email' => 'required',
         'password' => 'required',
       ]);
-      User::create([
+    $data =   User::create([
         'band_id' => request('band_id'),
         'band_name' => request('band_name'),
         'band_scope' => request('band_scope'),
