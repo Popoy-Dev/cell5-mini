@@ -42,6 +42,7 @@
                         <option value="Pop Music">Pop Music</option>
                         <option value="Metal">Metal</option>
                         <option value="Blues">Blues</option>
+                        <option value="Love Song">Love Song</option>
 
                       </select>
                     </div>

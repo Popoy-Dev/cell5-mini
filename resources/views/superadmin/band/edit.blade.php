@@ -15,7 +15,7 @@
                 {{session('success')}}
               </div>
               @endif()
-              <h4>Edit Registered Barangay</h4>
+              <h4>Edit Band Barangay</h4>
               <table class="table table-striped">
                 <thead>
                   <tr>
@@ -106,7 +106,7 @@
                         </div>
                         <div class="modal-footer">
                           <button type="submit" class="btn btn-primary">Save changes</button>
-                          
+
                           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                         </div>
                       </form>

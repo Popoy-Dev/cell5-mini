@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 use Image;
-
+use Auth;
 use Illuminate\Http\Request;
 use App\Band;
 class RegisterController extends Controller
@@ -40,12 +40,14 @@ class RegisterController extends Controller
   }
 
   public function viewRegister(){
-    $data = Band::select()->orderBy('band_release')->get();
+    $id  = Auth::user()->band_id;
+    $data = Band::select()->where('band_code', $id)->orderBy('band_release')->get();
     return view('user.view', compact('data'));
   }
 
   public function editRegister(){
-    $data = Band::select()->paginate(4);
+    $id  = Auth::user()->band_id;
+    $data = Band::select()->where('band_code', $id)->get();
     return view('user.edit', compact('data'));
   }
   public function editableRegister(Band $id){
@@ -81,7 +83,9 @@ class RegisterController extends Controller
   }
 
   public function deleteRegister(){
-    $data = Band::select()->orderBy('is_hidden', 'asc')->get();
+    $id  = Auth::user()->band_id;
+    
+    $data = Band::select()->where('band_code', $id)->orderBy('is_hidden', 'asc')->get();
     return view('user.delete', compact('data'));
   }
 

@@ -51,7 +51,7 @@ class BandController extends Controller
     $data->email = request('email');
     $data->password = Hash::make(request('password'));
     $data->save();
-    return back()->with('success', 'Barangay Account Succesfully Edited!');
+    return back()->with('success', 'Band Account Succesfully Edited!');
   }
   public function deleteBand(){
       $data = User::select()->orderBy('is_deleted', 'asc')->paginate(2);

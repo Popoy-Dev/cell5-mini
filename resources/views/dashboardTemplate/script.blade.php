@@ -36,6 +36,7 @@ $(document).ready(function(){
         dataType: "json",
 
         success:function(res){
+
           console.log("Successfully Changed")
         }
 

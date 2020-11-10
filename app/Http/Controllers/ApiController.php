@@ -9,7 +9,6 @@ use App\Band;
 class ApiController extends Controller
 {
   public function hideRegister(Band $id){
-    dd($id);
     $data = Band::where('id', $id->id)->first();
     $data->is_hidden = 0;
     $data->save();

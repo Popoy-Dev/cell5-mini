@@ -15,7 +15,7 @@
                 {{session('delete')}}
               </div>
               @endif()
-              <h4>Delete Band Barangay</h4>
+              <h4>Delete Band Account</h4>
               <table class="table table-striped">
                 <thead>
                   <tr>

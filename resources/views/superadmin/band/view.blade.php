@@ -10,7 +10,7 @@
         <div class="card-body">
           <div class="card">
             <div class="card-body">
-              <h4>View All Registered Band</h4>
+              <h4>View All Band Band</h4>
               <table class="table table-striped">
                 <thead>
                   <tr>

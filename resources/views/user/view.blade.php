@@ -17,7 +17,6 @@
             <div class="card-body">
               <!-- Search form -->
               <h4 class="mb-4 text-primary">Registration Details</h4>
-              <input class="form-control" type="text" id="search" placeholder="Search">
               <table class="table table-striped">
                 <thead>
                   <tr>
